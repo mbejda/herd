@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "adreward-8b3a6"
+  },
+  "targets": {
+    "adreward-8b3a6": {
+      "hosting": {
+        "adreward": [
+          "adreward-8b3a6"
+        ]
+      }
+    }
+  }
+}

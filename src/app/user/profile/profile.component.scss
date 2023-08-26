@@ -1,0 +1,23 @@
+.profile-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2em;
+  text-align: center;
+}
+
+.avatar-container {
+  margin-bottom: 2em;
+}
+
+.user-avatar {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 3px solid #3f51b5; /* Matches Angular Material's primary color */
+}
+
+.user-info-card {
+  margin: 0 auto;
+  max-width: 500px;
+}

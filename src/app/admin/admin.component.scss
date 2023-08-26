@@ -1,0 +1,43 @@
+.admin-panel {
+  padding: 2rem;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+.add-key-form {
+  margin-bottom: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.mat-table {
+  width: 100%;
+  overflow-x: auto;
+}
+.add-key-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.mat-raised-button {
+  height: 36px;
+  line-height: 36px;
+  padding: 0 15px;
+}

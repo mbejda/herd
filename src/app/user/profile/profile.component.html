@@ -1,0 +1,41 @@
+<div class="profile-container">
+
+
+
+  <!-- User's Avatar -->
+  <div class="avatar-container">
+    <img [src]="authService.user.photo" alt="User's Avatar" class="user-avatar" referrerpolicy="no-referrer">
+  </div>
+
+  <mat-label>File</mat-label>
+  <button mat-raised-button (click)="fileInput.click()">
+    {{ file ? file.name : 'Select' }}
+  </button>
+  <input hidden type="file" #fileInput (change)="onFileInput(fileInput.files)" />
+
+
+  <!-- app.component.html -->
+  <button
+    [disabled]="!file"
+    type="submit"
+    mat-raised-button
+    color="primary"
+    (click)="onSubmit()"
+  >
+    Submit
+  </button>
+
+
+  <!-- User's Info -->
+  <mat-card class="user-info-card">
+    <mat-card-title>{{ authService.user.displayName }}</mat-card-title>
+    <mat-card-content>
+      <div><strong>Email:</strong> {{ authService.user.email }}</div>
+      <div><strong>Keys Claimed:</strong> {{ authService.user.keys_claimed }}</div>
+      <div><strong>UID:</strong> {{ authService.user.uid }}</div>
+      <div><strong>Role:</strong> {{ authService.user.role }}</div>
+      <div><strong>Ads Watched:</strong> {{ authService.user.ads_watched }}</div>
+    </mat-card-content>
+  </mat-card>
+
+</div>

@@ -1,0 +1,56 @@
+<mat-toolbar color="primary">
+  <!-- Logo and Left Links -->
+  <div class="logo-container mr-4">
+    <!-- <img src="/assets/logo.png" alt="MyApp Logo" class="logo"> -->
+    <span class="app-title">AdReward</span>
+  </div>
+
+  <button mat-button routerLink="/dashboard" routerLinkActive="active-nav" *ngIf="authService.isLoggedIn">
+    <mat-icon>home</mat-icon>
+    <span>Home</span>
+  </button>
+
+  <button mat-button routerLink="/reward" routerLinkActive="active-nav" *ngIf="authService.isLoggedIn">
+    <mat-icon>redeem</mat-icon>
+    <span>Reward</span>
+  </button>
+
+  <button mat-button routerLink="/admin" routerLinkActive="active-nav" *ngIf="authService.isLoggedIn && authService.isAdmin">
+    <mat-icon>admin_panel_settings</mat-icon>
+    <span>Admin</span>
+  </button>
+
+  <span class="spacer"></span>
+
+  <!-- User Dropdown -->
+  <mat-menu #userMenu="matMenu">
+    <button mat-menu-item routerLink="/profile" routerLinkActive="active-nav">
+      <mat-icon>person</mat-icon>
+      Profile
+    </button>
+    <button mat-menu-item (click)="authService.Logout()">
+      <mat-icon>logout</mat-icon>
+      Logout
+    </button>
+  </mat-menu>
+
+  <!-- This triggers the user dropdown. You can replace the username with an icon or whatever suits your design. -->
+  <button mat-icon-button [matMenuTriggerFor]="userMenu" *ngIf="authService.isLoggedIn">
+    <mat-icon>account_circle</mat-icon>
+    <!-- <span>User</span> -->
+  </button>
+
+  <!-- Links for Unauthenticated users -->
+  <button mat-button routerLink="/login" *ngIf="!authService.isLoggedIn">
+    <mat-icon>login</mat-icon>
+    <span>Login</span>
+  </button>
+  <button mat-button routerLink="/register" *ngIf="!authService.isLoggedIn">
+    <mat-icon>person_add</mat-icon>
+    <span>Register</span>
+  </button>
+</mat-toolbar>
+
+<div class="content-container">
+  <router-outlet></router-outlet>
+</div>

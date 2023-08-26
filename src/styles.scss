@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.spacer {
+  flex: 1 1 auto;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.mat-toolbar {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.content-container {
+  margin: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.05), 0 7px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+.active-nav {
+  border-bottom: 2px solid white!important;  // simple underline for active state
+  border-radius: 0!important;  // to make sure the border applies cleanly
+}
+
+
+.ml-2 {
+  margin-left: 0.5rem!important;
+}
